@@ -25,8 +25,6 @@ function List(props) {
   );
 }
 
-
-
 function App(props) {
   
   const grabCards = function(cardIds) {

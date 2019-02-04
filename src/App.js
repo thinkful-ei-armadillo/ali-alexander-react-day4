@@ -24,10 +24,20 @@ function List(props) {
   );
 }
 
-function App() {
+function App(props) {
+  
+  const lists = props.store.lists.map(list => {
+    <List key={list.id} cards={list.cardIds} header={list.headers} />
+  })
+
   return (
-    <main className='App'>
-      {/* content goes here */}
+    <main className ="App">
+      <header class="App-header">
+        <h1>Trelloyes!</h1>
+      </header>
+      <div className="App-list">
+        {lists}
+      </div>
     </main>
   );
 }

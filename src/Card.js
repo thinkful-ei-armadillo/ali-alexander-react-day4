@@ -7,6 +7,7 @@ export default function Card(props) {
       <button
         type='button'
         aria-label='Delete'
+        onClick={() => props.onDelete(props.id)}
       >
         x
       </button>
